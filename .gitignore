@@ -37,5 +37,5 @@
 *.layout
 
 # Folder for executable 
-bin/
-obj/
+bin/**
+obj/**
