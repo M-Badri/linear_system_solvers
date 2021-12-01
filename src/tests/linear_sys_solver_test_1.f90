@@ -96,50 +96,5 @@ program lis_linear_solver_test_simple_1
    !> The summary of the test function
    call PRINTSUMMARY( test )
 
-!   block
-!      type(csr_matrix_t) :: mat
-!      integer :: isolv
-!
-!      call lsolver2%Build( file_name="example_2_input.cfg")
-!
-!      do isolv = 1, 2
-!         mat%nonzero_count = nnz
-!         if ( .not.allocated( mat%values ) )    allocate( mat%values, source=val_in )
-!         if ( .not.allocated( mat%row_index ) ) allocate( mat%row_index, source=indx_in )
-!         if ( .not.allocated( mat%columns) )    allocate( mat%columns, source=ptr_in)
-!
-!         uin(:) = 0.0_WP
-!         call lsolver2%Solve( mat, uin, rhs, uout)
-!      end do
-!
-!   end block
-
-!
-!   block
-!      type(csr_matrix_t) :: mat
-!      integer :: isolv
-!
-!      call lsolver3%Build( file_name="example_2_input.cfg")
-!
-!      do isolv = 1, 1
-!         mat%nonzero_count = nnz
-!         if ( .not. allocated( mat%values ) )    allocate( mat%values, source=val_in )
-!         if ( .not. allocated( mat%row_index ) ) allocate( mat%row_index, source=indx_in )
-!         if ( .not. allocated( mat%columns) )    allocate( mat%columns, source=ptr_in)
-!
-!         uin(:) = 0.0_WP
-!
-!
-!         call lsolver3%Solve( nvar, ptr_in, indx_in, val_in, uin, rhs, uout )
-!
-!!         print*, rhs, "ffffffffffffffffff"
-!      end do
-!
-!   end block
-
-
-
-
-
 end program lis_linear_solver_test_simple_1
 
