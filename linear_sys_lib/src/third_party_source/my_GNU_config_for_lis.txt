@@ -1,0 +1,3 @@
+./configure --prefix="/path/to/linear_system_solver/third_party" --enable-omp --enable-f90 --enable-saamg --enable-shared --enable-omp CC=gcc CFLAGS="-O3" FC=gfortran FCFLAGS="-O3 -fopenmp" LDFLAGS="-fopenmp" --disable-test 
+
+

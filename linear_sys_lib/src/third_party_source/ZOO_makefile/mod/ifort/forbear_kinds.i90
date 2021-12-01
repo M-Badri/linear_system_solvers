@@ -1,0 +1,36 @@
+# 1 "src/forbear/forbear_kinds.F90"
+!< **forbear** project, definition of parametric kinds.
+
+module forbear_kinds
+!< **forbear** project, definition of parametric kinds.
+implicit none
+private
+public :: ASCII
+public :: UCS4
+public :: ucs4_string
+
+# 13
+
+integer, parameter :: ASCII = selected_char_kind('default')    !< ASCII character set kind.
+
+# 18
+
+integer, parameter :: UCS4  = selected_char_kind('default')    !< Unicode character set kind.
+
+
+contains
+   pure function ucs4_string(input) result(output)
+!< Convert string of any kind to UCS4 string.
+   class(*), intent(in)                     :: input  !< Input string of any kind.
+   character(len=:, kind=UCS4), allocatable :: output !< Output string of UCS4 kind.
+
+   select type(input)
+# 32
+
+# 36
+
+   type is(character(len=*))
+      output = input
+   endselect
+   endfunction ucs4_string
+endmodule forbear_kinds
